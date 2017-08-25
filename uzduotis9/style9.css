@@ -1,0 +1,170 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.navbar-nav{
+    float: right;
+    color: black;
+}
+
+.navbar-default{
+    margin-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navbar-nav li a div:hover{
+    border: 2px solid #4ccd6c;
+    padding: 2px 5px;
+    border-radius: 50px;
+    color: #4ccd6c;
+    position: relative;
+    bottom: 4px;
+}
+
+.jumbotron{
+    background-color: #4ccd6c;
+    text-align: center;
+    margin-bottom: 0;
+    border-bottom: 0.5px solid #006622;
+    border-top: 1px solid #006622;
+}
+
+.jumbotron p{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 0.8em;
+}
+
+nav{
+    background-color: white;
+}
+
+img{
+    margin: auto;
+    width: 40%;
+    height: 40%;
+}
+
+.input-group{
+    margin: auto;
+    width: 25vw;
+   
+}
+
+.input-group input{
+    margin: auto;
+    width: 25vw;
+    border-collapse: collapse;
+    border: 2px solid #006622;
+    border-radius: 1em;
+}
+
+.input-group span{
+    border-collapse: collapse;
+    border: 2px solid #006622;
+    border-radius: 1em;
+    background-color: #006622;
+    color: white;
+}
+
+.white{
+    margin: auto;
+    color: white;
+    margin-top: 1em; 
+}
+
+.container{
+    background-image: url(cream_pixels.png);
+    width: 100%;
+    height: 60vh;
+
+}
+
+.container > div:nth-child(2){
+    margin: auto;
+    margin-top: 2%;
+    width: 60%;
+    height: 40%;
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    display: flex;
+}
+
+.container h1{
+    margin-top: 4%;
+    text-align: center;
+}
+
+.container h3{
+    color: #4ccd6c;
+    padding-left: 40px;
+}
+
+.login{
+    margin: auto;
+    flex-grow: 2;
+}
+
+.list{
+    margin: auto;
+    flex-grow: 2;
+}
+
+.list ol{
+    list-style-type: none;
+}
+
+.glyphicon-log-in{
+    color: #4ccd6c;
+    font-size: 4em;
+    float: right;
+}
+
+.buttons{
+    display: block;
+    margin-top: 4em;
+}
+
+.first, .second, .third{
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    background-color: white;
+    border: 3px solid #4ccd6c;
+    position: relative;
+    border-radius: 50%;
+}
+
+.first{
+    left: calc(67% - 2em);
+
+}
+
+.second{
+    left: calc(46% - 2em);
+}
+
+.third{
+    left: calc(25% - 2em);
+}
+
+.glyphicon-check, .glyphicon-link, .glyphicon-log-out{
+    display: block;
+    font-size: 2em;
+    color: #4ccd6c;
+    margin: auto;
+    position: relative;
+    left: 20%;
+    top: 20%;
+}
+
+.first:hover, .second:hover, .third:hover{
+    background-color: #4ccd6c;
+}
+
+.glyphicon-check:hover, .glyphicon-link:hover, .glyphicon-log-out:hover{
+    color: white;
+}
