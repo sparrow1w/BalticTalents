@@ -1,0 +1,6 @@
+table, tr, td{
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding: 2px; 
+    text-align: center;
+}
