@@ -3,68 +3,67 @@
 
 <head>
     <title>AngularJS</title>
-    <meta charset="utf-8"/> 
+    <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
     <script>
-// Sukuriame `myApp` aplikacijos modulį
-angular.module('myApp', []);
+        // Sukuriame `myApp` aplikacijos modulį
+        angular.module('myApp', []);
 
-// Aprašome  kontrolierių `myCtrl` ir priskiriame jį aplikacijos moduliui
-angular.module('myApp')
-    
-    .component('hello', {
-        template: 
-            '<user-input model="$ctrl.model"></user-input>' + 
-            '<hr>' +
-            '<table model="$ctrl.model"></table>',
-        controller: HelloCtrl
-    })
-     .component('userInput', {
-        template: 
-            '<label>Number: </label><input type="text" ng-model="$ctrl.model.number">' +
-            '<label>Distance: </label><input type="text" ng-model="$ctrl.model.distance">' +
-            '<label>Time: </label><input type="text" ng-model="$ctrl.model.time">',
-        bindings: { model: '<' } ,      
-    })
+        // Aprašome  kontrolierių `myCtrl` ir priskiriame jį aplikacijos moduliui
+        angular.module('myApp')
 
-    .component('table', {
-        template: "<table><tr><td>Number</td>" +
-                            "<td>" + "Distance (m)" + "</td>" +
-                            "<td>" + "Time (s)" + "</td>" +
-                            "<td>" + "Speed (km/h)" + "</td></tr>"+
-     "<tr ng-repeat='r in $ctrl.radars'><td>" + "{{ r.number }}" + "</td>" +
-                            "<td>" + "{{ r.distance }}" + "</td>" +
-                            "<td>" + "{{ r.time }}" + "</td>" +
-                            "<td>" + "{{ $ctrl.speed(r) }}" + "</td></tr></table>"+
-                            '<button ng-click="$ctrl.prideti()">Prideti</button>',
-        bindings: { model: '<' },
-        controller: TableCtrl
-    });
+            .component('hello', {
+                template:
+                '<user-input model="$ctrl.model"></user-input>' +
+                '<hr>' +
+                '<table model="$ctrl.model"></table>',
+                controller: HelloCtrl
+            })
+            .component('userInput', {
+                template:
+                '<label>Number: </label><input type="text" ng-model="$ctrl.model.number">' +
+                '<label>Distance: </label><input type="text" ng-model="$ctrl.model.distance">' +
+                '<label>Time: </label><input type="text" ng-model="$ctrl.model.time">',
+                bindings: { model: '<' },
+            })
 
-    function HelloCtrl() {
-    this.model = {}
-}
+            .component('table', {
+                template: `<table><tr><td>Number</td>
+            <td>Distance (m)</td>
+            <td>Time (s)</td>
+            <td>Speed (km/h)</td></tr>
+<tr ng-repeat='r in $ctrl.radars'><td>{{ r.number }}</td>
+            <td>{{ r.distance }}</td>
+            <td>{{ r.time }}</td>
+            <td>{{ $ctrl.speed(r) }}</td></tr></table>`+
+                '<button ng-click="$ctrl.prideti()">Prideti</button>',
+                bindings: { model: '<' },
+                controller: TableCtrl
+            });
 
-  function TableCtrl() { 
-           var $ctrl = this;
+        function HelloCtrl() {
+            this.model = {}
+        }
+
+        function TableCtrl() {
+            var $ctrl = this;
             this.radars = [
-                {number: 'ABC001', distance: 5000, time: 120},
-                {number: 'ZUK253', distance: 5000, time: 145},
-                {number: 'LRS852', distance: 5000, time: 150}
+                { number: 'ABC001', distance: 5000, time: 120 },
+                { number: 'ZUK253', distance: 5000, time: 145 },
+                { number: 'LRS852', distance: 5000, time: 150 }
             ];
-            this.speed = function(r) {
+            this.speed = function (r) {
                 return Math.round(r.distance / r.time);
             }
-        
-    $ctrl.prideti = function() {
-    number = $ctrl.model.number;
-    distance = $ctrl.model.distance;    
-    time = $ctrl.model.time;
-    $ctrl.radars.push({number, distance, time}); 
-    
-    }
+            $ctrl.prideti = function () {
+                number = $ctrl.model.number;
+                distance = $ctrl.model.distance;
+                time = $ctrl.model.time;
+                $ctrl.radars.push({ number, distance, time });
+            }
         }
-</script>
+
+    </script>
 </head>
 
 <body>
