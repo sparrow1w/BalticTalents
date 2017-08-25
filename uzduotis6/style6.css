@@ -1,0 +1,78 @@
+html, body{
+   font-family: arial, sans-serif; 
+   color: #4d4d4d;
+   margin: 5px;
+   padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+table{
+    background-color: #e6f3ff;
+    border-collapse: collapse;
+    border: 1px solid #ccddff;
+    width: 100%;
+    
+}
+th{
+    border-collapse: collapse;
+    border: 1px solid #ccddff;
+    background-color:  #80bfff;
+    padding: 5px;
+    color: white;
+    text-shadow: -1px -1px gray;
+
+}
+td{
+    border-collapse: collapse;
+    border: 1px solid #ccddff;
+    padding: 5px;
+}
+tr:nth-child(even){
+    background-color: #e6eeff;
+}
+.material-icons{
+    position: relative;
+    top: 5px;
+    color: #4dff4d;
+    margin-right: 5px;
+    size: 80%;
+    transform:scale(0.7, 0.7); 
+
+}
+.container{
+    padding: 5px;
+    width: 40vw;
+}
+.pasirinkti{
+    margin-top: 10px;
+}
+.member{
+    margin-top: 10px; 
+}
+select{
+    margin-left: 11px;
+}
+
+legend{
+    font-style: italic;
+}
+button{
+    background-color: #00b359;
+    position: relative;
+    left: 30vw;
+    color: white;
+    padding: 5px;
+    border: 1px solid darkgreen;
+    border-radius: 10%;
+}
+.name input{
+    margin-left: 70px;
+    margin-bottom: 5px; 
+}
+.email input{
+    margin-left: 72px;
+}
+.member input{
+    margin-left: 10px;
+}
